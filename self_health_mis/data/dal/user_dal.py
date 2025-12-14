@@ -1,8 +1,8 @@
 # data/dal/user_dal.py
 from typing import Optional
 from datetime import datetime
-from data.sqlite_conn import db_instance  # 导入全局数据库实例
-from data.model.user_model import UserProfile
+from self_health_mis.data.sqlite_conn import db_instance  # 导入全局数据库实例
+from self_health_mis.data.model.user_model import UserProfile
 
 # 数据访问层专注于纯数据库操作，业务逻辑应由服务层处理
 
