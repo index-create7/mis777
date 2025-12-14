@@ -1,6 +1,6 @@
 # core/auth.py
 from typing import Optional, Tuple, Dict, Any
-from data.dal.user_dal import register_user, login_user
+from self_health_mis.data.dal.user_dal import register_user, login_user
 
 
 def validate_user_credentials(username: str, password: str) -> Dict[str, Any]:
