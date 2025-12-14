@@ -1,18 +1,21 @@
 # E:\trae_ide\mis\self_health_mis\frontend\app.py
+
 import sys
 import os
 import streamlit as st
+
+# 获取当前文件所在目录（frontend/）
 frontend_dir = os.path.dirname(os.path.abspath(__file__))
-# 获取仓库根目录（frontend/的上一级：/mount/src/self_health_mis/）
-root_dir = os.path.dirname(frontend_dir)
-# 强制将根目录插入Python路径最前端（最高优先级，覆盖默认路径）
+# 计算项目根目录（self_health_mis的父目录，即mis777/）
+root_dir = os.path.dirname(os.path.dirname(frontend_dir))
+# 将项目根目录添加到Python路径
 sys.path.insert(0, root_dir)
 
-# 验证自定义包目录是否存在
-package_path = os.path.join(root_dir, "self_health_mis")
+# 验证路径是否正确（可选，用于调试）
+print(f"添加到Python路径的根目录: {root_dir}")
+print(f"验证self_health_mis是否存在: {os.path.exists(os.path.join(root_dir, 'self_health_mis'))}")
 
 
-dal_path = os.path.join(package_path, "data", "dal", "exercise_dal.py")
 
 from self_health_mis.data.dal.exercise_dal import add_fitness_record
 from self_health_mis.data.model.exercise_model import FitnessRecord
