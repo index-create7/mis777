@@ -12,7 +12,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from self_health_mis.data.sqlite_conn import db_instance
 from self_health_mis.data.dal.user_dal import login_user, get_user_profile, register_user
 from self_health_mis.data.dal.exercise_dal import get_fitness_records, get_fitness_goals
-from core.auth import user_login as auth_user_login
+from self_health_mis.core.auth import user_login as auth_user_login
 
 class SessionState:
     """
