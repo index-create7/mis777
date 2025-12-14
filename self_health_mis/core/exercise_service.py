@@ -2,7 +2,7 @@
 from typing import List, Optional, Dict, Any, Union, TypedDict, Final
 from datetime import datetime
 import pandas as pd
-from data.dal.exercise_dal import (
+from self_health_mis.data.dal.exercise_dal import (
     add_fitness_record, get_fitness_records, add_fitness_goal,
     get_fitness_goals, get_exercise_stats, auto_update_goal_progress,
     update_goal_progress, update_goal_target
