@@ -609,7 +609,7 @@ def main():
         avg_duration = total_duration / total_workouts if total_workouts > 0 else 0
 
         # 主界面标题
-        st.markdown("<h1 style='text-align: center; color: grey;'>夸父</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: grey;'>逐日</h1>", unsafe_allow_html=True)
         st.subheader("广积良，高又强！")
         col1, col2 = st.columns([1,1])
         with col1:
@@ -1266,3 +1266,5 @@ def render_brush_section_tab(records):
 # 调用主函数
 if __name__ == "__main__":
     main()
+    st.markdown("---")
+    st.markdown("© 2025 逐日. 身体是革命的本钱。")
